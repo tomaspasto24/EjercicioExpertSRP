@@ -9,16 +9,17 @@ namespace SRP
         public string Codigo { get ; private set; }
         public Ubicacion UbicacionLibro { get; private set; }
 
-
         public Libro(String titulo, String autor, String codigo)
         {
             this.Titulo = titulo;
             this.Autor = autor;
             this.Codigo = codigo;
+            
         }
+
         public void AlmacenarLibro(String sector, String estante)
         {
-            UbicacionLibro = new Ubicacion(this, sector, estante);
+            this.UbicacionLibro = new Ubicacion(this, sector, estante);
         }
     }
 }
